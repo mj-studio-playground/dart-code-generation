@@ -1,0 +1,19 @@
+targets:
+  $default:
+    builders:
+      code_generation|copyBuilder:
+        generate_for:
+          - lib/*
+        enabled: True
+        options:
+          name: MJ
+
+builders:
+  copyBuilder:
+    import: 'package:code_generation/code_generation.dart'
+    builder_factories: [ 'copyBuilder' ]
+    build_extensions:
+      .txt:
+        - .copy.txt
+    build_to: source
+    auto_apply: dependents
