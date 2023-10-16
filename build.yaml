@@ -5,8 +5,6 @@ targets:
         generate_for:
           - lib/*
         enabled: True
-        options:
-          name: MJ
 
 builders:
   copyBuilder:
